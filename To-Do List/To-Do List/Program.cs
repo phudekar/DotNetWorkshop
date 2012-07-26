@@ -74,7 +74,7 @@ namespace ToDoList.Common
                 };
 
                 
-               dataManager.SaveItems(item);
+               dataManager.SaveItem(item);
                Console.Clear();
                 Console.WriteLine("\nItem created");
                 return item;

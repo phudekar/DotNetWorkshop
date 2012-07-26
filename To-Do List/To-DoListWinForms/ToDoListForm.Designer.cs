@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toDoItemsGridView = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridContenxtMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.doneMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,18 +48,8 @@
             this.descriptionTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.titleError = new System.Windows.Forms.Label();
-            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toDoListsViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toDoListsViewModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.toDoItemsGridView)).BeginInit();
             this.gridContenxtMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toDoListsViewModelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toDoListsViewModelBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // toDoItemsGridView
@@ -75,6 +69,31 @@
             this.toDoItemsGridView.Name = "toDoItemsGridView";
             this.toDoItemsGridView.Size = new System.Drawing.Size(565, 323);
             this.toDoItemsGridView.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Title
+            // 
+            this.Title.DataPropertyName = "Title";
+            this.Title.HeaderText = "Title";
+            this.Title.Name = "Title";
+            // 
+            // Deadline
+            // 
+            this.Deadline.DataPropertyName = "Deadline";
+            this.Deadline.HeaderText = "DeadLine";
+            this.Deadline.Name = "Deadline";
+            // 
+            // Status
+            // 
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
             // 
             // gridContenxtMenu
             // 
@@ -204,43 +223,6 @@
             this.titleError.Size = new System.Drawing.Size(0, 13);
             this.titleError.TabIndex = 12;
             // 
-            // itemBindingSource
-            // 
-            this.itemBindingSource.DataSource = typeof(ToDoList.Common.Item);
-            // 
-            // toDoListsViewModelBindingSource
-            // 
-            this.toDoListsViewModelBindingSource.DataSource = typeof(To_DoListWinForms.ViewModel.ToDoListsViewModel);
-            // 
-            // toDoListsViewModelBindingSource1
-            // 
-            this.toDoListsViewModelBindingSource1.DataSource = typeof(To_DoListWinForms.ViewModel.ToDoListsViewModel);
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // Title
-            // 
-            this.Title.DataPropertyName = "Title";
-            this.Title.HeaderText = "Title";
-            this.Title.Name = "Title";
-            // 
-            // Deadline
-            // 
-            this.Deadline.DataPropertyName = "Deadline";
-            this.Deadline.HeaderText = "DeadLine";
-            this.Deadline.Name = "Deadline";
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            // 
             // ToDoListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,9 +245,6 @@
             this.Load += new System.EventHandler(this.OnLoad);
             ((System.ComponentModel.ISupportInitialize)(this.toDoItemsGridView)).EndInit();
             this.gridContenxtMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toDoListsViewModelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.toDoListsViewModelBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,9 +267,6 @@
         private System.Windows.Forms.ContextMenuStrip gridContenxtMenu;
         private System.Windows.Forms.ToolStripMenuItem deleteMenuItem;
         private System.Windows.Forms.ToolStripMenuItem doneMenuItem;
-        private System.Windows.Forms.BindingSource itemBindingSource;
-        private System.Windows.Forms.BindingSource toDoListsViewModelBindingSource;
-        private System.Windows.Forms.BindingSource toDoListsViewModelBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Title;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;

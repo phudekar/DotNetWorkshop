@@ -170,5 +170,10 @@ namespace To_DoListWinForms
                e.Cancel = true;
         }
 
+        private void toDoListsViewModelBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
