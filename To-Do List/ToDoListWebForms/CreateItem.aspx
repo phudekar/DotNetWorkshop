@@ -9,11 +9,17 @@
     <article>
         <p>
             <label>Title : </label>
-            <asp:TextBox ID="ItemTitle"  Text=""  runat="server"/>
+            <asp:TextBox ID="txtTitle"  Text=""  runat="server"/>
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtTitle" ErrorMessage="Title is required"></asp:RequiredFieldValidator>
         </p>
         <p>
             <label>Description : </label>
-            <asp:TextBox ID="ItemDescription"  rows="5" TextMode="MultiLine" runat="server" Text=""></asp:TextBox>
+            <asp:TextBox ID="txtDescription"  rows="5" TextMode="MultiLine" runat="server" Text=""></asp:TextBox>
+        </p>
+       <p>
+            <label>Deadline : </label>
+           <asp:TextBox ID="txtDeadline" Text="" runat="server"/> 
+            <asp:RequiredFieldValidator runat="server" ControlToValidate="txtDeadline"></asp:RequiredFieldValidator>
         </p>
         <p>
             <asp:Button OnClick="CreateItem"  Text="Create Item"  runat="server"/>

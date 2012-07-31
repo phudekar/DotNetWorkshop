@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ToDoList.Common.Manager;
+using ToDoListMVCWebApp.Models;
 
 namespace ToDoListMVCWebApp.Controllers
 {
@@ -13,11 +14,29 @@ namespace ToDoListMVCWebApp.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Index()
+        public HomeController()
         {
             dataManager = new MySqlDataManager();
+        }
+
+        public ActionResult Index()
+        {
             var items = dataManager.GetToDoItems();
             return View(items);
+        }
+
+        public ActionResult Week()
+        {
+//            dataManager = new MySqlDataManager();
+//            var items = dataManager.GetToDoItems();
+            ViewBag.Duration = Duration.Week;
+            return View(new Week(DateTime.Now,dataManager));
+        }
+
+        public ActionResult Month()
+        {
+            ViewBag.Duration = Duration.Month;
+            return View(new Month(DateTime.Now, dataManager));
         }
 /*
         //

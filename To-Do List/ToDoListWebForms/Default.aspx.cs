@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ToDoList.Common;
 using ToDoList.Common.Manager;
+using ToDoListWebForms.Controls;
 
 namespace ToDoListWebForms
 {
@@ -19,6 +20,17 @@ namespace ToDoListWebForms
             this.Title = "New Title";
             dataManager = new MySqlDataManager();
             ToDoItems = dataManager.GetToDoItems();
+
+            foreach (var item in ToDoItems)
+            {
+                var itemControl = (ItemControl) Page.LoadControl("~/Controls/ItemControl.ascx");
+                itemControl.Title = item.Title;
+                itemControl.Description = item.Description;
+                itemControl.Deadline = item.Deadline.ToShortDateString();
+                itemsList.Controls.Add(itemControl);
+            }
+            
         }
+
     }
 }

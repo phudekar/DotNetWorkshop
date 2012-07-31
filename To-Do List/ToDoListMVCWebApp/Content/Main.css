@@ -1,0 +1,163 @@
+﻿.headerNav {
+    height: 40px;
+    position: fixed;
+    top: 0;
+    vertical-align: middle;
+    width: 900px;
+}
+
+.footerNav {
+    bottom: 0;
+    height: 50px;
+    position: fixed;
+    width: 900px;
+    text-align: right;
+}
+
+.headerNav, .footerNav {
+    background-color: #444444;
+    box-shadow: 0 -1px 9px 1px black;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    width: auto;
+    display: inline;
+    padding: 10px;
+}
+
+    .logo img {
+        width: 48px;
+        float: left;
+    }
+
+.loginInfo {
+    color: lightgrey;
+    display: inline;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    text-align: right;
+    width: auto;
+    padding: 10px;
+}
+
+.footerNav ul {
+    display: inline;
+}
+
+.footerMenu li {
+    display: inline;
+}
+
+.footerMenu a:hover {
+    color: white;
+}
+
+.footerMenu a {
+    font-size: 16px;
+    color: lightgrey;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.mainBody {
+    margin: auto;
+    padding: 0px;
+    width: 900px;
+    min-height: 800px;
+    background-color: white;
+    box-shadow: 0 0 30px 10px gray;
+}
+
+.contentDiv {
+    height: auto;
+    margin: 40px 0;
+    min-height: 100%;
+    padding: 0px;
+    width: 100%;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.sideNav {
+    margin: 5px 20px;
+    position: fixed;
+    top: 27px;
+    z-index: 1;
+}
+
+    .sideNav ul {
+        list-style: none;
+        padding: 0px;
+    }
+
+    .sideNav li {
+        width: auto;
+        display: inline;
+        list-style: none outside none;
+        margin: 0;
+    }
+
+    .sideNav a:hover {
+        color: white;
+        bottom: -10px;
+        position: relative;
+        padding: 20px 25px;
+    }
+
+       .selectedMenu {
+        color: white;
+        bottom: -10px;
+        position: relative;
+        padding: 20px 25px;
+    }
+
+    .sideNav a {
+        background: none repeat scroll 0 0 skyblue;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 10px -1px gray;
+        padding: 10px 25px;
+        margin-left: -7px;
+        color: black;
+        font-size: 14px;
+        text-decoration: none;
+        text-shadow: 1px 2px 1px darkgray;
+    }
+
+.footerNav img {
+    width: 48px;
+}
+
+.footerNav div {
+    width: auto;
+    display: inline;
+}
+
+#createPanel {
+   background-color: black;
+    bottom: 20px;
+    margin-left: 100px;
+    height: 0;
+    padding: 20px;
+    position: fixed;
+    width: 50%;
+    opacity: 0;
+      border-radius: 10px 10px 0px 0px;
+    color: white;
+}
+
+.createItemButton, .cancelCreationButton {
+    background-color: black;
+    color: white;
+    border: solid 1px white;
+     margin: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+}

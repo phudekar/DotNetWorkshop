@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Task for Month";
+    Layout = "../Shared/_Layout.cshtml";
+}
+@model ToDoListMVCWebApp.Models.Month
+
+<div>
+@*    <table class="month">*@
+@*        @{*@
+@*            var dayIndex = 0;*@
+@*            for (int j = 0; j < 5; j++)*@
+@*            {*@
+@*                Output.WriteLine("<tr>");*@
+@*                for (int i = 0; i < 7; i++)*@
+@*                {*@
+@*                    Output.Write("<td><div class=\"monthItem\">");*@
+@*                    Output.WriteLine("<span class=\"dayOfWeek\">{0}</span>", ((DayOfWeek)i));*@
+@*                    DateTime? dateTime = null;*@
+@*                    if (dayIndex == 0)*@
+@*                    {*@
+@*                        dateTime = Model.Days.First().Key;*@
+@*                    }*@
+@*                    else*@
+@*                    {*@
+@*                        dateTime = Model.Days.Keys.ToList()[dayIndex];*@
+@*                    }*@
+@*                    if ((int)(dateTime.Value.DayOfWeek) >= i)*@
+@*                    {*@
+@*                        Output.WriteLine("<span class=\"monthDate\">{0}</span>", dateTime.Value.Date.Day);*@
+@*                        dayIndex++;*@
+@*                    }*@
+@*                    Output.Write("</div></td>");*@
+@*                }*@
+@*                Output.WriteLine("</tr>");*@
+@*            }*@
+@*        }*@
+    @*    </table>*@
+    <ul class="week">
+    @{
+        var days = Model.Days.Keys;
+        foreach (DateTime day in days)
+        {
+            Output.WriteLine("<li><div class=\"weekItem\">");
+            Output.WriteLine("<div class=\"weekItemHeader\">");
+            Output.WriteLine("<div class=\"weekDate\">{0}</div>", day.Day);
+            Output.WriteLine("<div class=\"weekDay\">{0}</div>", day.DayOfWeek);
+            Output.WriteLine("</div>");
+            Output.WriteLine("<div class=\"weekItemContent\">");
+            foreach (var item in Model.Days[day])
+            {
+                Output.WriteLine("<span class=\"itemContainer\">{0}</span>", item.Title);
+            }
+            Output.WriteLine("</div></div><div style=\"clear:both;\"></div>");
+            Output.WriteLine("</li>");
+        }
+    }
+    </ul>
+</div>

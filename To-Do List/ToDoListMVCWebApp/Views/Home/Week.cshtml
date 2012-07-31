@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Task for Week";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+@model ToDoListMVCWebApp.Models.Week
+
+<div>
+    <ul class="week">
+        @{
+            var days = Model.Days.Keys;
+        foreach (DateTime day in days)
+        {
+            Output.WriteLine("<li><div class=\"weekItem\">");
+            Output.WriteLine("<div class=\"weekItemHeader\">");
+            Output.WriteLine("<div class=\"weekDate\">{0}</div>",day.Day);
+            Output.WriteLine("<div class=\"weekDay\">{0}</div>",day.DayOfWeek);
+            Output.WriteLine("</div>");
+            Output.WriteLine("<div class=\"weekItemContent\">");
+            foreach (var item in Model.Days[day])
+            {
+                Output.WriteLine("<span class=\"itemContainer\">{0}</span>",item.Title);
+            }
+            Output.WriteLine("</div></div><div style=\"clear:both;\"></div>");
+  Output.WriteLine("</li>");
+        }
+    }
+    </ul>
+</div>

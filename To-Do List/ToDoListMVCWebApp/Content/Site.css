@@ -2,7 +2,7 @@
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: #232323;
-    background-color: #fff;
+    background: lightgrey;
 }
 
 header, footer, nav, section {
@@ -69,9 +69,19 @@ textarea {
 .relaxDeadline{
     background-color: lightcyan;
 }
+.shortDeadline {
+    background-color: #FFDD88;
+}
+
+.fairDeadline {
+    background-color: #FFEEAA;
+}
 
 .itemsTable {
-    width: 80%
+       margin: auto;
+    padding: 10px;
+    position: relative;
+    width: 100%;
 }
 
 .itemsTable td {
@@ -80,19 +90,12 @@ textarea {
 }
 
 .itemsHeader {
-    background-color: lightgrey;
+    background-color: gray;
     font-size: 18px;
-        
+    color: white;
 }
 
-.shortDeadline {
-    background-color: burlywood;
+.content {
+    margin-top: 100px;
 }
 
-.fairDeadline {
-    background-color: moccasin;
-}
-
-body {
-    background: url(Images/bg_body.png) no-repeat scroll 0 0 #125A68;
-}

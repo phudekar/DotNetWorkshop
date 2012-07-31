@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListMVCWebApp", "ToDoLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoListWebForms", "ToDoListWebForms\ToDoListWebForms.csproj", "{8A5AAC8E-D9D1-48BC-B2DF-5A61059E6345}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ToDoListDatabase", "ToDoListDatabase\ToDoListDatabase.sqlproj", "{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,12 @@ Global
 		{EAF45E64-2A1E-4A3C-8098-4BC4C9BF68DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAF45E64-2A1E-4A3C-8098-4BC4C9BF68DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAF45E64-2A1E-4A3C-8098-4BC4C9BF68DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45F8F7C-566E-4C1B-A4AA-62E2EE460443}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

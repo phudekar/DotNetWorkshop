@@ -789,3 +789,29 @@ tr.pager td {
         }
 }
 /* END: Mobile Styles */
+
+
+.relaxDeadline
+.shortDeadline 
+.fairDeadline {
+    margin: 10px;
+    padding: 10px;
+}
+
+.itemHeader{
+    font-size: 18px;
+    float: left;
+}
+
+.itemDescription {
+    font-size: 14px;
+    clear: both;
+    display: run-in;
+    padding: 10px;
+       
+}
+ 
+.itemDeadline {
+    float: right;
+    font-size: 12px;
+}

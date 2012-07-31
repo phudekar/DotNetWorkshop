@@ -1,0 +1,40 @@
+﻿.weekItem {
+    min-height: 70px;
+    border: solid gray 1px;
+}
+.weekItemHeader {
+        text-align: center;
+    width: 100px;
+    float:left
+}
+
+.weekDate {
+      font-size: 28px;
+    margin: auto;
+    width: auto;
+}
+.weekDay {
+    color: orange;
+}
+
+.weekItemContent {
+     padding: 5px;
+}
+
+.week li{
+     display: inline;
+}
+
+.week {
+     margin: 0;
+    padding: 0;
+}
+
+.itemContainer {
+ background-color: #FFFF76;
+    border: 1px solid gray;
+    border-radius: 2px 2px 2px 2px;
+    display: inline;
+    margin: 2px;
+    padding: 2px 10px;   
+}

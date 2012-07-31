@@ -10,6 +10,9 @@ namespace ToDoListMVCWebApp
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/custom").Include(
+                       "~/Scripts/main.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui*"));
 
@@ -20,7 +23,10 @@ namespace ToDoListMVCWebApp
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css")
+                .Include("~/Content/main.css")
+                .Include("~/Content/Week.css")
+                .Include("~/Content/Month.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

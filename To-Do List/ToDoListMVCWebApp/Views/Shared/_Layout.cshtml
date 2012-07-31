@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using ToDoListMVCWebApp.Models
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,12 +7,80 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/themes/base/css", "~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/custom")
 </head>
     <body>
-        <h2>To-Do List</h2>
-        @RenderBody()
-
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
+        <div class="mainBody">
+        <div class="headerNav">
+            <div class="logo">
+               <img src="~/Content/Images/64px-ToDoList.png"/>
+                To-Do List
+            </div>
+            <div class="loginInfo">
+                @*                @ViewBag.UserName*@
+                pradiphudekar@gmail.com
+            </div>
+        </div>
+       
+            <div class="contentDiv">
+                <aside class="sideNav">
+                    <ul>
+                           <li>
+                    <a href="#">
+                        <span>Overdue</span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="#">
+                                <span>Today</span>
+                            </a>
+                        </li>
+                    <li>
+                     @Html.ActionLink("This Week", "Week", "Home")
+                    
+                        </li>
+                        <li>
+                            @Html.ActionLink("This Month", "Month", "Home")
+                        </li>
+                    </ul>
+                </aside>
+                <div class="content">
+                    
+                    @RenderBody()
+                    @Scripts.Render("~/bundles/jquery")
+                    @RenderSection("scripts", required: false)
+                </div>
+            </div>
+         <div id="createPanel">
+                    @RenderPage("CreateItemPanel.cshtml")
+                </div>
+            <div class="footerNav">
+               
+                <ul  class="footerMenu">
+                    <li>
+                        <a href="#" id="createLink">
+                            @*                        <div>*@
+                            @*                        <img src="~/Content/Images/new-empty-file-here.png" />*@
+                            @*                            </div>*@
+                            <span>Create</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Edit</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            @*                        <div>*@
+                            @*                        <img src="~/Content/Images/Recycle Bin Empty.png"/>*@
+                            @*                            </div>*@
+                            <span>Delete</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            </div>
     </body>
 </html>

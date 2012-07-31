@@ -20,10 +20,10 @@ namespace ToDoListWebForms
 
         protected void CreateItem(object sender, EventArgs e)
         {
-            var item = new Item(DateTime.Now.AddDays(2));
+            var item = new Item(DateTime.Parse(txtDeadline.Text));
 
-            item.Title = ItemTitle.Text;
-            item.Description = ItemDescription.Text;
+            item.Title = txtTitle.Text;
+            item.Description = txtDescription.Text;
 
             dataManager.SaveItem(item);
             Response.Redirect("~/Default.aspx");

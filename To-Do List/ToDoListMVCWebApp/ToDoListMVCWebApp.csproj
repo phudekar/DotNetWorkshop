@@ -144,10 +144,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Day.cs" />
+    <Compile Include="Models\Duration.cs" />
+    <Compile Include="Models\Month.cs" />
+    <Compile Include="Models\Week.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Images\64px-ToDoList.png" />
+    <Content Include="Content\Images\anxiety-icon.png" />
     <Content Include="Content\Images\bg_body.png" />
+    <Content Include="Content\Images\new-empty-file-here.png" />
+    <Content Include="Content\Images\Recycle Bin Empty.png" />
+    <Content Include="Content\Images\to-do-list.jpg" />
+    <Content Include="Content\Month.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -175,6 +185,7 @@
     <Content Include="Content\themes\base\jquery.ui.slider.css" />
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\Week.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <None Include="Scripts\jquery-1.6.2-vsdoc.js" />
@@ -201,8 +212,10 @@
     </Content>
     <Content Include="Scripts\knockout-2.0.0.debug.js" />
     <Content Include="Scripts\knockout-2.0.0.js" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Content\Main.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -219,10 +232,12 @@
     <None Include="unity.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Content Include="Views\Home\Week.cshtml" />
+    <Content Include="Views\Shared\CreateItemPanel.cshtml" />
+    <Content Include="Views\Home\Month.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

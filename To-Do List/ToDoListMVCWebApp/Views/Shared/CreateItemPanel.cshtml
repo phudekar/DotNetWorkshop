@@ -1,0 +1,31 @@
+﻿<div>
+  @using (Html.BeginForm("Create","Items"))
+  {
+      <table>
+          <tr>
+              <td>Title</td>
+              <td><input type="text" name="title" class="itemTitle"/></td>
+          </tr>
+          <tr>
+              <td>Description</td>
+              <td><textarea name="descrption" class="itemDescription" rows="5" cols="50"></textarea></td>
+          </tr>
+          <tr>
+              <td>Deadline</td>
+              <td><input type="text" value="@DateTime.Now.ToShortDateString()" name="deadline"/></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td></td>
+          </tr>
+          <tr>
+              <td></td>
+              <td>
+                  <input type="submit" value="Create" class="createItemButton"/>
+                  <input type="button" value="Cancel" class="cancelCreationButton" onclick="cancelCreation()"/>
+              </td>
+
+          </tr>
+      </table>
+  }
+</div>
