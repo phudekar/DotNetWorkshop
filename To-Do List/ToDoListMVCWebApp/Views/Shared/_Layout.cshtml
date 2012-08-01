@@ -26,15 +26,11 @@
             <div class="contentDiv">
                 <aside class="sideNav">
                     <ul>
-                           <li>
-                    <a href="#">
-                        <span>Overdue</span>
-                    </a>
-                </li>
-                        <li>
-                            <a href="#">
-                                <span>Today</span>
-                            </a>
+                <li>
+                            @Html.ActionLink("Overdue", "Index", "Home")
+                        </li>
+                            <li>
+                            @Html.ActionLink("Today", "Day", "Home")
                         </li>
                     <li>
                      @Html.ActionLink("This Week", "Week", "Home")

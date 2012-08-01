@@ -144,7 +144,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Day.cs" />
     <Compile Include="Models\Duration.cs" />
     <Compile Include="Models\Month.cs" />
     <Compile Include="Models\Week.cs" />
@@ -156,6 +155,7 @@
     <Content Include="Content\Images\bg_body.png" />
     <Content Include="Content\Images\new-empty-file-here.png" />
     <Content Include="Content\Images\Recycle Bin Empty.png" />
+    <Content Include="Content\Images\search.png" />
     <Content Include="Content\Images\to-do-list.jpg" />
     <Content Include="Content\Month.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -235,6 +235,7 @@
     <Content Include="Views\Home\Week.cshtml" />
     <Content Include="Views\Shared\CreateItemPanel.cshtml" />
     <Content Include="Views\Home\Month.cshtml" />
+    <Content Include="Views\Home\Day.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Task for Day";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+@using ToDoList.Common
+@model List<Item>
+
+<div>
+<table class="itemsTable">
+    <tr class="itemsHeader">
+        <td>Title</td>
+        <td>Description</td>
+        <td>Deadline</td>
+    </tr>
+    @{
+        foreach (var item in Model)
+        {
+            var taskSeverityClass = "relaxDeadline";
+            var daysRemaining = item.Deadline.Subtract(DateTime.Now).Days;
+            if (daysRemaining < 1)
+            {
+                taskSeverityClass = "shortDeadline";
+            }else if(daysRemaining < 3)
+            {
+                taskSeverityClass = "fairDeadline";
+            }
+
+            Output.WriteLine(item.Status == Status.Done ? "<tr class='done'>" : "<tr class='" + taskSeverityClass + "'>");
+            Output.WriteLine("<td>" + item.Title + "</td>");
+            Output.WriteLine("<td>" + item.Description + "</td>");
+            Output.WriteLine("<td>" + item.Deadline.ToShortDateString() + "</td>");
+            Output.WriteLine("</tr>");
+        }
+    }
+</table>
+</div>

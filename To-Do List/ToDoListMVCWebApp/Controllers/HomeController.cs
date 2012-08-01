@@ -25,18 +25,34 @@ namespace ToDoListMVCWebApp.Controllers
             return View(items);
         }
 
-        public ActionResult Week()
+        public ActionResult Week(string datetime)
         {
 //            dataManager = new MySqlDataManager();
 //            var items = dataManager.GetToDoItems();
             ViewBag.Duration = Duration.Week;
-            return View(new Week(DateTime.Now,dataManager));
+            var date = DateTime.Now;
+            if (!String.IsNullOrEmpty(datetime))
+            {
+                date = DateTime.Parse(datetime);
+            }
+            return View(new Week(date,dataManager));
         }
 
         public ActionResult Month()
         {
             ViewBag.Duration = Duration.Month;
             return View(new Month(DateTime.Now, dataManager));
+        }
+
+        public ActionResult Day(string datetime)
+        {
+            ViewBag.Duration = Duration.Day;
+            var date = DateTime.Now;
+            if(!String.IsNullOrEmpty(datetime))
+            {
+                date = DateTime.Parse(datetime);
+            }
+            return View(dataManager.GetToDoItems().Where(x=>x.Deadline.Date.Equals(date.Date)).ToList());
         }
 /*
         //

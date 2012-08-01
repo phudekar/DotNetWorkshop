@@ -21,6 +21,11 @@
             {
                 Output.WriteLine("<span class=\"itemContainer\">{0}</span>",item.Title);
             }
+            using (Html.BeginForm("Day", "Home"))
+            {
+                Output.WriteLine("<input name=\"datetime\" type=\"hidden\" value=\"{0}\"/>", day.ToShortDateString());
+                Output.WriteLine("<input class=\"lookupButton lookupButtonWeek\" type=\"submit\" value=\"\"/>");
+            }
             Output.WriteLine("</div></div><div style=\"clear:both;\"></div>");
   Output.WriteLine("</li>");
         }

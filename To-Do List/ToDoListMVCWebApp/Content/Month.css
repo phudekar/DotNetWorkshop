@@ -1,11 +1,53 @@
 ﻿.month {
+      margin: 2px;
+    padding: 10px;
+    table-layout: auto;
     width: 90%;
 }
 
 .month td {
-    
 }
 
-.monthItem {
-      padding: 30px 5px;
+.monthTableItem {
+  box-shadow: 0 0 2px 0 gray;
+    min-height: 120px;
+    min-width: 117px;
+    padding: 2px;
+}
+
+.monthDate {
+  color: gray;
+    float: left;
+    font-size: 32px;
+    margin: -7px 2px;
+}
+
+.dayOfWeek {
+    color: orange;
+    float: right;
+    margin: 2px 3px;
+    padding: 0;
+    text-align: right;
+}
+
+.lookupButton {
+  background-color: transparent;
+    background-image: url("Images/search.png");
+    background-size: 18px auto;
+    cursor: pointer;
+    height: 18px;
+    opacity: 0.6;
+    width: 18px;
+       position: relative;
+    border: none;
+        float: right;
+}
+
+.lookupButtonMonth {
+    margin-top: 62px;
+    position: relative;
+}
+
+.lookupButton:hover {
+    opacity: 0.9;
 }

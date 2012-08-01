@@ -1,6 +1,6 @@
 ﻿.weekItem {
+    box-shadow: 0 0 1px 0 gray;
     min-height: 70px;
-    border: solid gray 1px;
 }
 .weekItemHeader {
         text-align: center;
@@ -12,6 +12,7 @@
       font-size: 28px;
     margin: auto;
     width: auto;
+    color: gray;
 }
 .weekDay {
     color: orange;
@@ -31,10 +32,20 @@
 }
 
 .itemContainer {
- background-color: #FFFF76;
-    border: 1px solid gray;
-    border-radius: 2px 2px 2px 2px;
+    background-color: #FFFF76;
+    border: 1px solid yellow;
+    box-shadow: 5px 5px 7px -7px gray;
     display: inline;
     margin: 2px;
-    padding: 2px 10px;   
+    opacity: 0.7;
+    padding: 1px;
+}
+
+.itemContainer:hover {
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 5px 7px 15px -7px gray;
+}
+
+.lookupButtonWeek {
 }
